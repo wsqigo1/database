@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    command: redis-server /etc/redis/redis.conf
+    volumes:
+      - ./volumes/redis/data:/data
+      - ./volumes/redis/conf:/etc/redis
+    ports:
+      - '16379:6379'
+  service:
+    container_name: gormExampleMySQL
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      MYSQL_DATABASE: gormExample
+    ports:
+      - "13306:3306"
+    volumes:
+      - ./volumes/mysql/data:/var/lib/mysql

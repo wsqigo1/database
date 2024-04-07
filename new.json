@@ -1,0 +1,272 @@
+{
+  "account": {
+    "id": 15411,
+    "name": "chainacc/test-unidx-d8",
+    "alias": "test-unidx",
+    "symbol": "test-unidx-d8",
+    "address": "0x6f732a1abce45e31d2429449e2f2802cab844301",
+    "config": {},
+    "chain_account_type_items": {
+      "data": [
+        {
+          "chain": "optimism",
+          "account_type": "wallet",
+          "status": "api"
+        },
+        {
+          "chain": "optimism",
+          "account_type": "defi",
+          "status": "api"
+        }
+      ],
+      "is_all_evm": false,
+      "display": "with_asset_or_operation"
+    },
+    "account_tag": "",
+    "remark": "",
+    "company": "qb",
+    "department": "qb/ch-02",
+    "_created": "2024-03-31T13:13:01.04121+08:00",
+    "_updated": null,
+    "is_archived": false,
+    "is_manual": false,
+    "creator": "wsqigo",
+    "operator": "wsqigo"
+  },
+  "items": [
+    {
+      "id": 4183481,
+      "acc_id": 15411,
+      "name": "chainacc/test-unidx-d8/optimism_wallet",
+      "alias": "test-unidx",
+      "symbol": "test-unidx-d8",
+      "chain_account_type": "optimism_wallet",
+      "chain": "optimism",
+      "account_type": "wallet",
+      "protocol": "wallet",
+      "pool_item_symbol": "WALLET_4183481",
+      "pool_item": "WALLET",
+      "address": "0x6f732a1abce45e31d2429449e2f2802cab844301",
+      "company": "qb",
+      "department": "qb/ch-02",
+      "create_time": "2024-03-31T13:13:04.309854+08:00",
+      "is_manual": false,
+      "is_deleted": false,
+      "is_archived": false,
+      "wallet_item": {
+        "init_token_list": [
+          {
+            "amount": "2455.124923392165425274",
+            "price": "1.807255156634504159",
+            "symbol": "unidx",
+            "quote_source": "others",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "0x28b42698caf46b4b012cf38b6c75867e0762186d"
+          },
+          {
+            "amount": "0.006310995006869859",
+            "price": "3555.123834622423",
+            "symbol": "eth",
+            "quote_source": "index",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "eth"
+          },
+          {
+            "amount": "68.690241553261053",
+            "price": "3.647077124957",
+            "symbol": "op",
+            "quote_source": "index",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "0x4200000000000000000000000000000000000042"
+          }
+        ],
+        "token_list": [
+          {
+            "amount": "0.006310995006869859",
+            "price": "3348.079651152242",
+            "symbol": "eth",
+            "quote_source": "index",
+            "quote_time": "2024-04-03T17:59:15.43365145+08:00",
+            "address": "eth"
+          },
+          {
+            "amount": "68.690241553261053",
+            "price": "3.199751954644",
+            "symbol": "op",
+            "quote_source": "index",
+            "quote_time": "2024-04-03T17:57:18.159638254+08:00",
+            "address": "0x4200000000000000000000000000000000000042"
+          }
+        ]
+      },
+      "defi_pool_item": null,
+      "nft_item": null,
+      "update_time": "2024-04-03T17:58:58.393648308+08:00",
+      "api_update_time": "2024-04-03T12:48:46.53961752+08:00",
+      "fund_asset_base": "usd",
+      "margin_ratio": null,
+      "accum_funding_fee": null,
+      "perpetual_detail": null
+    },
+    {
+      "id": 4183482,
+      "acc_id": 15411,
+      "name": "chainacc/test-unidx-d8/optimism_defi/kwenta/4183482",
+      "alias": "test-unidx",
+      "symbol": "test-unidx-d8",
+      "chain_account_type": "optimism_defi",
+      "chain": "optimism",
+      "account_type": "defi",
+      "protocol": "kwenta",
+      "pool_item_symbol": "STAKED_4183482",
+      "pool_item": "STAKED",
+      "address": "0x6f732a1abce45e31d2429449e2f2802cab844301",
+      "company": "qb",
+      "department": "qb/ch-02",
+      "create_time": "2024-03-31T13:13:04.309854+08:00",
+      "is_manual": false,
+      "is_deleted": false,
+      "is_archived": false,
+      "wallet_item": null,
+      "defi_pool_item": {
+        "protocol_name": "Kwenta",
+        "protocol_url": "https://kwenta.eth.limo",
+        "strategy": "Staked",
+        "pool_info": {
+          "id": "0x61294940ce7cd1bda10e349adc5b538b722ceb88",
+          "index": "",
+          "validator": ""
+        },
+        "init_supply_list": [
+          {
+            "amount": "101.808991662913924864",
+            "price": "116.486836254462",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "init_reward_list": [
+          {
+            "amount": "4.494986875065519783",
+            "price": "116.486836254462",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "init_borrow_list": [],
+        "supply_list": [
+          {
+            "amount": "101.808991662913924864",
+            "price": "128.210172899471",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "2024-04-03T17:57:18.159638254+08:00",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "reward_list": [
+          {
+            "amount": "4.680524315239762731",
+            "price": "128.210172899471",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "2024-04-03T17:57:18.159638254+08:00",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "borrow_list": [],
+        "vesting_detail": null,
+        "impermanent_loss_usd": "0",
+        "impermanent_loss_amounts": [],
+        "debt_ratio": null,
+        "health_rate": null,
+        "last_update": 1712138338392002712,
+        "is_display_only": false,
+        "unrealized_value_usd_display_only": null,
+        "value_usd_display_only": null
+      },
+      "nft_item": null,
+      "update_time": "2024-04-03T17:58:58.393671264+08:00",
+      "api_update_time": "2024-04-03T17:48:57+08:00",
+      "fund_asset_base": "usd",
+      "margin_ratio": null,
+      "accum_funding_fee": null,
+      "perpetual_detail": null
+    },
+    {
+      "id": 4183483,
+      "acc_id": 15411,
+      "name": "chainacc/test-unidx-d8/optimism_defi/kwenta/4183483",
+      "alias": "test-unidx",
+      "symbol": "test-unidx-d8",
+      "chain_account_type": "optimism_defi",
+      "chain": "optimism",
+      "account_type": "defi",
+      "protocol": "kwenta",
+      "pool_item_symbol": "VESTING_4183483",
+      "pool_item": "VESTING",
+      "address": "0x6f732a1abce45e31d2429449e2f2802cab844301",
+      "company": "qb",
+      "department": "qb/ch-02",
+      "create_time": "2024-03-31T13:13:04.309854+08:00",
+      "is_manual": false,
+      "is_deleted": false,
+      "is_archived": false,
+      "wallet_item": null,
+      "defi_pool_item": {
+        "protocol_name": "Kwenta",
+        "protocol_url": "https://kwenta.eth.limo",
+        "strategy": "Vesting",
+        "pool_info": {
+          "id": "0xb2a20fcdc506a685122847b21e34536359e94c56",
+          "index": "",
+          "validator": ""
+        },
+        "init_supply_list": [
+          {
+            "amount": "0.096512538951013751",
+            "price": "116.486836254462",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "0001-01-01T00:00:00Z",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "init_reward_list": [],
+        "init_borrow_list": [],
+        "supply_list": [
+          {
+            "amount": "0.096512538951013751",
+            "price": "128.210172899471",
+            "symbol": "kwenta",
+            "quote_source": "index",
+            "quote_time": "2024-04-03T17:57:18.159638254+08:00",
+            "address": "0x920cf626a271321c151d027030d5d08af699456b"
+          }
+        ],
+        "reward_list": [],
+        "borrow_list": [],
+        "vesting_detail": null,
+        "impermanent_loss_usd": "0",
+        "impermanent_loss_amounts": [],
+        "debt_ratio": null,
+        "health_rate": null,
+        "last_update": 1712138338392002712,
+        "is_display_only": false,
+        "unrealized_value_usd_display_only": null,
+        "value_usd_display_only": null
+      },
+      "nft_item": null,
+      "update_time": "2024-04-03T17:58:58.393686062+08:00",
+      "api_update_time": "2024-04-03T17:48:57+08:00",
+      "fund_asset_base": "usd",
+      "margin_ratio": null,
+      "accum_funding_fee": null,
+      "perpetual_detail": null
+    }
+  ]
+}
