@@ -4,3 +4,63 @@
 
 2024/04/08 09:57:45 G:/Users/WSQ/database/gorm/update.go:25
 [7.087ms] [rows:1] UPDATE `wsq_content` SET `created_at`='2024-04-08 09:57:45.023',`updated_at`='2024-04-08 09:57:45.045',`deleted_at`=NULL,`subject`='',`likes`=99,`views`=99,`publish_time`='2024-04-08 09:57:45.022',`author_id`=0 WHERE `wsq_content`.`deleted_at` IS NULL AND `id` = 24
+
+2024/04/09 09:30:09 G:/Users/WSQ/database/gorm/init.go:54
+[error] failed to initialize database, got error dial tcp 127.0.0.1:13306: connectex: No connection could be made because the target machine actively refused it.
+
+2024/04/09 09:30:45 G:/Users/WSQ/database/gorm/init.go:54
+[error] failed to initialize database, got error driver: bad connection
+
+2024/04/09 09:31:11 G:/Users/WSQ/database/gorm/update.go:46
+[30.055ms] [rows:0] UPDATE `wsq_content` SET `likes`=10001,`subject`='Where Update Row',`updated_at`='2024-04-09 09:31:11.163' WHERE likes > 100 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:31:55 G:/Users/WSQ/database/gorm/update.go:46
+[27.899ms] [rows:5] UPDATE `wsq_content` SET `likes`=10001,`subject`='Where Update Row',`updated_at`='2024-04-09 09:31:55.211' WHERE likes > 50 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:32:16 G:/Users/WSQ/database/gorm/update.go:46
+[31.873ms] [rows:5] UPDATE `wsq_content` SET `likes`=10001,`subject`='Where Update Row',`updated_at`='2024-04-09 09:32:16.148' WHERE likes > 50 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:41:18 G:/Users/WSQ/database/gorm/update.go:89
+[27.991ms] [rows:5] UPDATE `wsq_content` SET `likes`=likes + 10,`subject`='Where Update Row',`updated_at`='2024-04-09 09:41:18.479' WHERE likes > 50 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:42:41 G:/Users/WSQ/database/gorm/update.go:89 Error 1366 (HY000): Incorrect integer value: 'likes + 10' for column 'likes' at row 17
+[22.435ms] [rows:0] UPDATE `wsq_content` SET `likes`='likes + 10',`subject`='Where Update Row',`updated_at`='2024-04-09 09:42:41.739' WHERE likes > 50 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:57:03 G:/Users/WSQ/database/gorm/delete.go:22
+[21.000ms] [rows:1] UPDATE `wsq_content` SET `deleted_at`='2024-04-09 09:57:03.639' WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:57:03 G:/Users/WSQ/database/gorm/delete.go:24 record not found
+[2.007ms] [rows:0] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:57:03 G:/Users/WSQ/database/gorm/delete.go:28
+[2.000ms] [rows:1] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:57:36 G:/Users/WSQ/database/gorm/delete.go:22
+[24.681ms] [rows:0] UPDATE `wsq_content` SET `deleted_at`='2024-04-09 09:57:35.988' WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:57:36 G:/Users/WSQ/database/gorm/delete.go:24 record not found
+[2.774ms] [rows:0] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:57:39 G:/Users/WSQ/database/gorm/delete.go:28
+[2.840ms] [rows:1] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:57:52 G:/Users/WSQ/database/gorm/delete.go:21
+[19.948ms] [rows:0] UPDATE `wsq_content` SET `deleted_at`='2024-04-09 09:57:52.132' WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL
+
+2024/04/09 09:57:52 G:/Users/WSQ/database/gorm/delete.go:23 record not found
+[2.150ms] [rows:0] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 AND `wsq_content`.`deleted_at` IS NULL ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:57:52 G:/Users/WSQ/database/gorm/delete.go:27
+[2.315ms] [rows:1] SELECT * FROM `wsq_content` WHERE `wsq_content`.`id` = 13 ORDER BY `wsq_content`.`id` LIMIT 1
+
+2024/04/09 09:59:34 G:/Users/WSQ/database/gorm/delete.go:36
+[9.092ms] [rows:1] DELETE FROM `wsq_content` WHERE `wsq_content`.`id` = 14
+
+2024/04/09 12:52:27 G:/Users/WSQ/database/gorm/raw.go:18
+[35.358ms] [rows:5] SELECT `id`, `subject`, `likes`, `views` FROM `wsq_content` WHERE `likes` > 99 ORDER BY `likes` DESC LIMIT 12
+
+2024/04/09 12:56:04 G:/Users/WSQ/database/gorm/raw.go:34
+[11.213ms] [rows:3] UPDATE `wsq_content` SET `subject` = CONCAT(`subject`, '-new postfix') WHERE `id` BETWEEN 20 AND 30
+
+2024/04/09 12:56:24 G:/Users/WSQ/database/gorm/raw.go:34
+[2.759ms] [rows:0] UPDATE `wsq_content` SET `subject` = CONCAT(`subject`, '-new postfix') WHERE `id` BETWEEN 30 AND 40

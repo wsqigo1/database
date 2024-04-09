@@ -2,6 +2,7 @@ package gorm
 
 import (
 	"fmt"
+	"gorm.io/gorm"
 	"log"
 )
 
@@ -42,12 +43,58 @@ func UpdateWhere() {
 
 	// 执行带有条件的更新
 	result := DB.Model(&Content{}).
-		Where("likes > ?", 100).
+		Where("likes > ?", 50).
 		Updates(values)
 	if result.Error != nil {
 		log.Fatalln(result.Error)
 	}
 
 	// 获取更新结果，更新的记录数量（受影响的记录数）
-	// 指的修改的
+	// 指的修改的记录数，而不是满足条件的记录数
+	log.Println("updated rows num:", result.RowsAffected)
+}
+
+func UpdateNoWhere() {
+	// map 结构
+	values := map[string]any{
+		"subject": "Where Update Row",
+		"likes":   10001,
+	}
+
+	// 执行带有条件的更新
+	// 若需要全局更新
+	// .Where(1)
+	result := DB.Model(&Content{}).
+		Updates(values)
+	if result.Error != nil {
+		log.Fatalln(result.Error)
+	}
+
+	// 获取更新结果，更新的记录数量（受影响的记录数）
+	// 指的修改的记录数，而不是满足条件的记录数
+	log.Println("updated rows num:", result.RowsAffected)
+}
+
+func UpdateExpr() {
+	// 更新的字段值数据
+	// map 推荐
+	values := map[string]any{
+		"subject": "Where Update Row",
+		//"likes":   "likes + 10",
+		// Incorrect integer value: 'likes + 10' for column 'likes' at row 17
+		// 值为计算式表达的结果时，使用 Expr 类型
+		"likes": gorm.Expr("likes + ?", 10),
+	}
+
+	// 执行带有条件的更新
+	result := DB.Model(&Content{}).
+		Where("likes > ?", 50).
+		Updates(values)
+	if result.Error != nil {
+		log.Fatalln(result.Error)
+	}
+
+	// 获取更新结果，更新的记录数量（受影响的记录数）
+	// 指的修改的记录数，而不是满足条件的记录数
+	log.Println("updated rows num:", result.RowsAffected)
 }
